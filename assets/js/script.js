@@ -181,8 +181,21 @@ function registrarReserva(e) {
     }
 }
 
-// Inicialización de Eventos Seguros [cite: 69]
+// Inicialización de Eventos Seguros
 document.addEventListener('DOMContentLoaded', () => {
+
+// Botón para el desafío adicional: Eliminar todo de un viaje
+    const btnClearAll = document.getElementById('btn-clear-all');
+    if (btnClearAll) {
+      btnClearAll.addEventListener('click', () => {
+          if (confirm('¿Seguro que deseas eliminar absolutamente todas las reservas?')) {
+             reservas = []; // Vaciar el arreglo
+                localStorage.removeItem('cine_reservas'); // Limpiar almacenamiento local
+                mostrarReservas(); // Actualizar vista vacía
+                calcularTotalEntradas(); // Resetear métricas a 0
+        }
+    });
+}
     // Pintar elementos e indicadores recuperados desde LocalStorage al arrancar
     mostrarReservas();
     calcularTotalEntradas();
