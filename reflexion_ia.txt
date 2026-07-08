@@ -1,0 +1,56 @@
+REFLEXIÓN SOBRE EL USO DE IA EN EL DESARROLLO
+Actividad Práctica: Sistema de Reserva de Entradas para un Cine
+
+
+1. ¿Qué herramienta de IA utilizó?
+
+R: Para este proyecto usé Google Gemini como asistente de código 
+mientras programaba en Visual Studio Code.
+
+-----------------------------------------------------------------------
+2. ¿Qué consulta realizó?
+
+R: Le pedí ayuda principalmente para estructurar la base de las funciones 
+que pide la guía (como obtenerDatos y validarDatos) y para que me orientara 
+en cómo armar una validación limpia en JavaScript que detectara cuando alguien 
+intenta meter puros espacios en blanco en los campos de texto. 
+También le consulté opciones eficientes para sumar las entradas del inventario.
+
+-----------------------------------------------------------------------
+3. ¿Qué sugerencia entregó la IA?
+
+R: La IA me sugirió usar el método `.trim()` para limpiar los textos antes 
+de validarlos, lo que evita que se salten las reglas usando la barra espaciadora. 
+Para los cálculos del resumen, me recomendó usar `.reduce()` para sacar el total 
+de entradas de forma más directa y compacta, y me recordó la importancia de meter 
+los escuchadores de eventos dentro de un `DOMContentLoaded` para que el script no 
+falle al buscar los elementos del HTML.
+
+-----------------------------------------------------------------------
+4. ¿Aceptó completamente la sugerencia o realizó modificaciones? Explique.
+
+R: No la acepté completa, la tuve que ajustar sí o sí. Por ejemplo, 
+cuando me dio el código para buscar la película más vista (que era parte del desafío opcional), 
+la lógica que me entregó funcionaba bien al principio, pero si yo borraba todas las reservas 
+de la lista usando el botón de eliminar, la página se caía y tiraba error en la consola porque 
+el arreglo se quedaba vacío. Tuve que analizar el flujo y agregar un condicional `if` por mi 
+cuenta para frenar el error y asegurar que la aplicación siguiera respondiendo de forma estable 
+en el navegador. El control final lo tuve que llevar yo.
+
+-----------------------------------------------------------------------
+5. ¿Qué ventajas encontró al utilizar IA durante el desarrollo?
+
+R: Me sirvió mucho para ahorrar tiempo, sobre todo al armar la estructura repetitiva 
+de las funciones y al diseñar el layout de CSS limpio y ordenado con Grid sin estar 
+adivinando las propiedades. Funciona súper bien como un compañero de código para 
+destrabarte rápido cuando no te acuerdas de la sintaxis exacta de algún método nativo del DOM.
+
+-----------------------------------------------------------------------
+6. ¿Qué aspectos considera importante validar antes de utilizar código generado por IA?
+
+R: Lo más importante es que no puedes asegurar qur todo lo que entrega esta bien. 
+Hay que revisar que concuerde exactamente con lo que se está trabajando en la 
+rúbrica (los nombres de las funciones, las variables, etc.), porque la IA suele 
+inventar soluciones genéricas o usar funciones que no corresponden. 
+Si agregamos código que no se entiende cómo funciona, al primer error el programa 
+no sabremos cómo arreglarlo.
